@@ -10,9 +10,9 @@ from pyrogram.raw import functions
 from PyroUbot import *
 
 
-@WANN.BOT("start")
-@WANN.START
-@WANN.PRIVATE
+@AGOY.BOT("start")
+@AGOY.START
+@AGOY.PRIVATE
 async def _(client, message):
     buttons = BTN.START(message)
     msg = MSG.START(message)
@@ -21,7 +21,7 @@ async def _(client, message):
         reply_markup=InlineKeyboardMarkup(buttons))
 
 
-@WANN.CALLBACK("bahan")
+@AGOY.CALLBACK("bahan")
 async def _(client, callback_query):
     user_id = callback_query.from_user.id
     if user_id in ubot._get_my_id:
@@ -307,7 +307,7 @@ async def _(client, callback_query):
 ɴᴀᴍᴇ : <a href=tg://user?id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a>
 ɪᴅ : {new_client.me.id}
 ᴘʀᴇꜰɪxᴇꜱ : {' '.join(SH)}
-ʜᴀʀᴀᴘ ᴊᴏɪɴ : @GayoUbotSupport ᴜɴᴛᴜᴋ ɪɴꜰᴏ" ᴛᴇʀʙᴀʀᴜ
+ʜᴀʀᴀᴘ ᴊᴏɪɴ : @agoytesti ᴜɴᴛᴜᴋ ɪɴꜰᴏ" ᴛᴇʀʙᴀʀᴜ
 ᴊɪᴋᴀ ʙᴏᴛ ᴛɪᴅᴀᴋ ʀᴇꜱᴘᴏɴ, ᴋᴇᴛɪᴋ /restart</b></blockquote>
         """
     await bot_msg.edit(text_done, disable_web_page_preview=True,
@@ -351,7 +351,7 @@ async def is_cancel(callback_query, text):
     return False
 
 
-@WANN.BOT("control")
+@AGOY.BOT("control")
 async def _(client, message):
     buttons = [
             [InlineKeyboardButton("ʀᴇꜱᴛᴀʀᴛ", callback_data=f"ress_ubot")],
@@ -364,7 +364,7 @@ async def _(client, message):
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
-@WANN.CALLBACK("ress_ubot")
+@AGOY.CALLBACK("ress_ubot")
 async def _(client, callback_query):
     if callback_query.from_user.id not in ubot._get_my_id:
         return await callback_query.answer(
@@ -390,7 +390,7 @@ async def _(client, callback_query):
                     except Exception as error:
                         return await callback_query.edit_message_text(f"{error}")
 
-@WANN.BOT("restart")
+@AGOY.BOT("restart")
 async def _(client, message):
     msg = await message.reply("<b>ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ</b>")
     if message.from_user.id not in ubot._get_my_id:
@@ -417,9 +417,9 @@ async def _(client, message):
                     except Exception as error:
                         return await msg.edit(f"{error}")
 
-@WANN.CALLBACK("cek_ubot")
-@WANN.BOT("getubot")
-@WANN.ADMIN
+@AGOY.CALLBACK("cek_ubot")
+@AGOY.BOT("getubot")
+@AGOY.ADMIN
 async def _(client, callback_query):
     await bot.send_message(
         callback_query.from_user.id,
@@ -437,7 +437,7 @@ async def _(client, callback_query):
     except:
         return await callback_query.answer("✅ sᴜᴅᴀʜ ᴛɪᴅᴀᴋ ᴀᴋᴛɪғ", True)
 
-@WANN.CALLBACK("del_ubot")
+@AGOY.CALLBACK("del_ubot")
 async def _(client, callback_query):
     user_id = callback_query.from_user.id
     if user_id not in await get_list_from_vars(client.me.id, "ADMIN_USERS"):
