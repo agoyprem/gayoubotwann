@@ -10,7 +10,7 @@ from PyroUbot import *
 CONFIRM_PAYMENT = []
 
 
-@WANN.CALLBACK("^confirm")
+@AGOY.CALLBACK("^confirm")
 async def _(client, callback_query):
     user_id = int(callback_query.from_user.id)
     full_name = f"{callback_query.from_user.first_name} {callback_query.from_user.last_name or ''}"
@@ -22,7 +22,7 @@ async def _(client, callback_query):
             user_id,
             f"""
 <b>💬 sɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍᴋᴀɴ ʙᴜᴋᴛɪ sᴄʀᴇᴇɴsʜᴏᴛ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ: {full_name}
-ᴊɪᴋᴀ ʙᴇʟᴜᴍ ᴅɪ ᴋᴏɴғɪʀᴍᴀsɪ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ @wannoffc08</b></blockquote>
+ᴊɪᴋᴀ ʙᴇʟᴜᴍ ᴅɪ ᴋᴏɴғɪʀᴍᴀsɪ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ @agoymarket</b></blockquote>
 """,
             timeout=300,
         )
