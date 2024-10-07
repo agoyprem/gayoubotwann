@@ -48,11 +48,11 @@ async def _(client, inline_query):
             get_exp = await get_expired_date(my.me.id)
             exp = get_exp.strftime("%d-%m-%Y") if get_exp else "None"
             if my.me.id == OWNER_ID:
-                status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  <code>[ᴏᴡɴᴇʀ]</code>"
+                status = "agoy-ᴜʙᴏᴛ ᴠ2  <code>[ᴏᴡɴᴇʀ]</code>"
             elif my.me.id in await get_list_from_vars(client.me.id, "SELER_USERS"):
-                status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  </b> <code>[ʀᴇsᴇʟʟᴇʀ]</code>"
+                status = "agoy-ᴜʙᴏᴛ ᴠ2  </b> <code>[ʀᴇsᴇʟʟᴇʀ]</code>"
             else:
-                status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  </b> <code>[ᴘʀᴇᴍɪᴜᴍ]</code>"
+                status = "agoy-ᴜʙᴏᴛ ᴠ1  </b> <code>[ᴘʀᴇᴍɪᴜᴍ]</code>"
             button = BTN.ALIVE(get_id)
             start = datetime.now()
             await my.invoke(Ping(ping_id=0))
@@ -83,7 +83,7 @@ async def _(client, inline_query):
             )
 
 
-@WANN.CALLBACK("alv_cls")
+@AGOY.CALLBACK("alv_cls")
 async def _(client, callback_query):
     get_id = callback_query.data.split()
     if not callback_query.from_user.id == int(get_id[2]):
@@ -96,19 +96,19 @@ async def _(client, callback_query):
             )
 
 
-@WANN.BOT("anu")
-@WANN.ADMIN
+@AGOY.BOT("anu")
+@AGOY.ADMIN
 async def _(client, message):
     buttons = BTN.BOT_HELP(message)
     sh = await message.reply("help menu information", reply_markup=InlineKeyboardMarkup(buttons))
     
 
-@WANN.CALLBACK("balik")
+@AGOY.CALLBACK("balik")
 async def _(client, callback_query):
     buttons = BTN.BOT_HELP(callback_query)
     sh = await callback_query.message.edit("help menu information", reply_markup=InlineKeyboardMarkup(buttons))
 
-@WANN.CALLBACK("reboot")
+@AGOY.CALLBACK("reboot")
 async def _(client, callback_query):
     user_id = callback_query.from_user.id
     if user_id not in await get_list_from_vars(client.me.id, "ADMIN_USERS"):
@@ -116,7 +116,7 @@ async def _(client, callback_query):
     await callback_query.answer("system berhasil di restart", True)
     subprocess.call(["bash", "start.sh"])
 
-@WANN.CALLBACK("update")
+@AGOY.CALLBACK("update")
 async def _(client, callback_query):
     out = subprocess.check_output(["git", "pull"]).decode("UTF-8")
     user_id = callback_query.from_user.id
@@ -129,7 +129,7 @@ async def _(client, callback_query):
     os.execl(sys.executable, sys.executable, "-m", "PyroUbot")
 
 
-@WANN.UBOT("help")
+@AGOY.UBOT("help")
 async def user_help(client, message):
     if not get_arg(message):
         try:
@@ -152,7 +152,7 @@ async def user_help(client, message):
                 f"<b>❌ No module found <code>{module}</code></b>"
             )
 
-@WANN.INLINE("^user_help")
+@AGOY.INLINE("^user_help")
 async def user_help_inline(client, inline_query):
     SH = await ubot.get_prefix(inline_query.from_user.id)
     msg = f"<blockquote>🪙 ᴍᴇɴᴜ ɪɴʟɪɴᴇ <a href=tg://user?id={inline_query.from_user.id}>{inline_query.from_user.first_name} {inline_query.from_user.last_name or ''}</a>\n★ ᴛᴏᴛᴀʟ ᴍᴏᴅᴜʟᴇs: {len(HELP_COMMANDS)}\n  ᴘʀᴇꜰɪx: {' '.join(SH)}</b></blockquote>"
@@ -163,7 +163,7 @@ async def user_help_inline(client, inline_query):
     )]
     await client.answer_inline_query(inline_query.id, cache_time=60, results=results)
 
-@WANN.CALLBACK("^close_user")
+@AGOY.CALLBACK("^close_user")
 async def close_usernya(client, callback_query):
     unPacked = unpackInlineMessage(callback_query.inline_message_id)
     for x in ubot._ubot:
@@ -172,7 +172,7 @@ async def close_usernya(client, callback_query):
                 unPacked.chat_id, unPacked.message_id
             )
 
-@WANN.CALLBACK("help_(.*?)")
+@AGOY.CALLBACK("help_(.*?)")
 async def help_callback(client, callback_query):
     mod_match = re.match(r"help_module\((.+?)\)", callback_query.data)
     prev_match = re.match(r"help_prev\((.+?)\)", callback_query.data)
@@ -188,7 +188,7 @@ async def help_callback(client, callback_query):
         button = [[InlineKeyboardButton("⊲ ʙᴀᴄᴋ", callback_data="help_back")]]
         await callback_query.edit_message_text(
             text=text 
-            + f"<blockquote><b>-- USERBOT 15K/BULAN BY @SEWAUBOT --</b></blockquote>\n<blockquote>• <b>-- CARA PENGGUNAAN UBOT DI @TUTORBYWANN --</b></blockquote>",
+            + f"<blockquote><b>-- USERBOT 15K/BULAN BY @agoymarket --</b></blockquote>\n<blockquote>• <b>-- CARA PENGGUNAAN UBOT DI @agoytesti --</b></blockquote>",
            reply_markup=InlineKeyboardMarkup(button),
             disable_web_page_preview=True,
         )
