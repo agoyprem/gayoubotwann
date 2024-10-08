@@ -417,9 +417,9 @@ async def _(client, message):
                     except Exception as error:
                         return await msg.edit(f"{error}")
 
-@AGOY.CALLBACK("cek_ubot")
-@AGOY.BOT("getubot")
-@AGOY.ADMIN
+@WANN.CALLBACK("cek_ubot")
+@WANN.BOT("getubot")
+@WANN.ADMIN
 async def _(client, callback_query):
     await bot.send_message(
         callback_query.from_user.id,
@@ -437,7 +437,7 @@ async def _(client, callback_query):
     except:
         return await callback_query.answer("✅ sᴜᴅᴀʜ ᴛɪᴅᴀᴋ ᴀᴋᴛɪғ", True)
 
-@AGOY.CALLBACK("del_ubot")
+@WANN.CALLBACK("del_ubot")
 async def _(client, callback_query):
     user_id = callback_query.from_user.id
     if user_id not in await get_list_from_vars(client.me.id, "ADMIN_USERS"):
