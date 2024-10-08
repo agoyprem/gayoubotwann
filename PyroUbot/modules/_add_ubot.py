@@ -10,9 +10,9 @@ from pyrogram.raw import functions
 from PyroUbot import *
 
 
-@AGOY.BOT("start")
-@AGOY.START
-@AGOY.PRIVATE
+@WANN.BOT("start")
+@WANN.START
+@WANN.PRIVATE
 async def _(client, message):
     buttons = BTN.START(message)
     msg = MSG.START(message)
@@ -21,7 +21,7 @@ async def _(client, message):
         reply_markup=InlineKeyboardMarkup(buttons))
 
 
-@AGOY.CALLBACK("bahan")
+@WANN.CALLBACK("bahan")
 async def _(client, callback_query):
     user_id = callback_query.from_user.id
     if user_id in ubot._get_my_id:
