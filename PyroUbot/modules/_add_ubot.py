@@ -351,7 +351,7 @@ async def is_cancel(callback_query, text):
     return False
 
 
-@AGOY.BOT("control")
+@WANN.BOT("control")
 async def _(client, message):
     buttons = [
             [InlineKeyboardButton("ʀᴇꜱᴛᴀʀᴛ", callback_data=f"ress_ubot")],
@@ -364,7 +364,7 @@ async def _(client, message):
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
-@AGOY.CALLBACK("ress_ubot")
+@WANN.CALLBACK("ress_ubot")
 async def _(client, callback_query):
     if callback_query.from_user.id not in ubot._get_my_id:
         return await callback_query.answer(
@@ -390,7 +390,7 @@ async def _(client, callback_query):
                     except Exception as error:
                         return await callback_query.edit_message_text(f"{error}")
 
-@AGOY.BOT("restart")
+@WANN.BOT("restart")
 async def _(client, message):
     msg = await message.reply("<b>ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ</b>")
     if message.from_user.id not in ubot._get_my_id:
