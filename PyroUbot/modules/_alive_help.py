@@ -83,7 +83,7 @@ async def _(client, inline_query):
             )
 
 
-@AGOY.CALLBACK("alv_cls")
+@WANN.CALLBACK("alv_cls")
 async def _(client, callback_query):
     get_id = callback_query.data.split()
     if not callback_query.from_user.id == int(get_id[2]):
