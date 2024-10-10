@@ -52,7 +52,7 @@ async def _(client, inline_query):
             elif my.me.id in await get_list_from_vars(client.me.id, "SELER_USERS"):
                 status = "agoy-ᴜʙᴏᴛ ᴠ2  </b> <code>[ʀᴇsᴇʟʟᴇʀ]</code>"
             else:
-                status = "agoy-ᴜʙᴏᴛ ᴠ1  </b> <code>[ᴘʀᴇᴍɪᴜᴍ]</code>"
+                status = "agoy-ᴜʙᴏᴛ ᴠ2  </b> <code>[ᴘʀᴇᴍɪᴜᴍ]</code>"
             button = BTN.ALIVE(get_id)
             start = datetime.now()
             await my.invoke(Ping(ping_id=0))
@@ -188,7 +188,7 @@ async def help_callback(client, callback_query):
         button = [[InlineKeyboardButton("⊲ ʙᴀᴄᴋ", callback_data="help_back")]]
         await callback_query.edit_message_text(
             text=text 
-            + f"<blockquote><b>-- USERBOT 15K/BULAN BY @agoymarket --</b></blockquote>\n<blockquote>• <b>-- CARA PENGGUNAAN UBOT DI @agoytesti --</b></blockquote>",
+            + f"<blockquote><b>-- USERBOT 15K/BULAN BY @agoymarket --</b></blockquote>\n<blockquote>• <b>-- CARA PENGGUNAAN UBOT DI @SEWAUSERBOT --</b></blockquote>",
            reply_markup=InlineKeyboardMarkup(button),
             disable_web_page_preview=True,
         )
