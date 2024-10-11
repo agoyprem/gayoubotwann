@@ -307,7 +307,7 @@ async def _(client, callback_query):
 ɴᴀᴍᴇ : <a href=tg://user?id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a>
 ɪᴅ : {new_client.me.id}
 ᴘʀᴇꜰɪxᴇꜱ : {' '.join(SH)}
-ʜᴀʀᴀᴘ ᴊᴏɪɴ : @agoytesti ᴜɴᴛᴜᴋ ɪɴꜰᴏ" ᴛᴇʀʙᴀʀᴜ
+ʜᴀʀᴀᴘ ᴊᴏɪɴ : @SEWAUSERBOT ᴜɴᴛᴜᴋ ɪɴꜰᴏ" ᴛᴇʀʙᴀʀᴜ
 ᴊɪᴋᴀ ʙᴏᴛ ᴛɪᴅᴀᴋ ʀᴇꜱᴘᴏɴ, ᴋᴇᴛɪᴋ /restart</b></blockquote>
         """
     await bot_msg.edit(text_done, disable_web_page_preview=True,
@@ -315,10 +315,10 @@ async def _(client, callback_query):
     await bash("rm -rf *session*")
     await install_my_peer(new_client)
     try:
-        await new_client.join_chat("TestiByWann")
-        await new_client.join_chat("GayoUbotSupport")
-        await new_client.join_chat("sewaubot")
-        await new_client.join_chat("tutorbywann")
+        await new_client.join_chat("agoytesti")
+        await new_client.join_chat("SEWAUSERBOT")
+        await new_client.join_chat("AgoyUbotSupport")
+        await new_client.join_chat("sellerubotagoy2")
     except UserAlreadyParticipant:
         pass
 
