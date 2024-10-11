@@ -9,6 +9,7 @@ __HELP__ = """
 
 perintah : <code>{0}tourl</code> [reply media/text]
     mengapload media/text ke catbox.moe</b></blockquote>
+    <blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT</blockquote></b>
 """
 
 async def upload_file(buffer: BytesIO) -> str:
