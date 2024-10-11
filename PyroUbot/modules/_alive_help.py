@@ -67,7 +67,6 @@ async def _(client, inline_query):
         `peer_users: {users} users`
         `peer_group: {group} group`
         `start_uptime: {uptime}`</blockquote>
-
         <blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT</blockquote></b>
 """
             await client.answer_inline_query(
@@ -190,7 +189,7 @@ async def help_callback(client, callback_query):
         button = [[InlineKeyboardButton("⊲ ʙᴀᴄᴋ", callback_data="help_back")]]
         await callback_query.edit_message_text(
             text=text 
-            + f"<blockquote><b>-- USERBOT 15K/BULAN BY @agoymarket --</b></blockquote>\n<blockquote>• <b>-- CARA PENGGUNAAN UBOT DI @SEWAUSERBOT --</b></blockquote>",
+            + f"<blockquote><b>-- USERBOT 15K/BULAN BY @SEWAUSERBOT --</b></blockquote>\n<blockquote>• <b>-- CARA PENGGUNAAN UBOT DI @SEWAUSERBOT --</b></blockquote>",
            reply_markup=InlineKeyboardMarkup(button),
             disable_web_page_preview=True,
         )
