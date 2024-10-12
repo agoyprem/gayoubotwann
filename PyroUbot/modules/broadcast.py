@@ -33,6 +33,8 @@ perintah : <code>{0}autobc</code>
 
 query:
     |on/off |text |delay |list |remove |limit</b></blockquote>
+    
+    <blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
 """
 
 
@@ -149,6 +151,8 @@ async def gcast_handler(client, message):
 <blockquote><b>{sks}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ</b>
 <b>{ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</b>
 <b>{ktrng}ᴛʏᴘᴇ :</b> <code>{command}</code></blockquote>
+
+<blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
 """
     return await message.reply(_gcs)
 
@@ -214,6 +218,10 @@ async def _(client, message):
 <blockquote><b>{bcs}ʙʀᴏᴀᴅᴄᴀꜱᴛ ғᴏʀᴅᴡᴀʀᴅ ᴅᴏɴᴇ</blockquote>
 <blockquote>{brhsl}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ
 {ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</blockquote></b>
+
+<blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
+"""
+
 """
     return await message.reply(_gcs)
 
@@ -265,6 +273,10 @@ async def _(client, message):
         if chat_id in blacklist:
             txt = f"""
 <blockquote><b>{grp} group: {message.chat.title}  ꜱudah ada dalam blackliꜱt broadcaꜱt</b></blockquote>
+
+<blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
+"""
+
 """
         else:
             await add_to_vars(client.me.id, "BL_ID", chat_id)
@@ -468,6 +480,10 @@ async def _(client, message):
 putaran {done}
 {brhsl}ꜱucceꜱ {group} group
 {mng}wait {delay} minuteꜱ</blockquote>
+
+<blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
+"""
+
 """,
                     quote=True,
                 )
