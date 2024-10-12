@@ -34,7 +34,6 @@ perintah : <code>{0}autobc</code>
 query:
     |on/off |text |delay |list |remove |limit</b></blockquote>
     
-    <blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
 """
 
 
@@ -152,7 +151,6 @@ async def gcast_handler(client, message):
 <b>{ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</b>
 <b>{ktrng}ᴛʏᴘᴇ :</b> <code>{command}</code></blockquote>
 
-<blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
 """
     return await message.reply(_gcs)
 
