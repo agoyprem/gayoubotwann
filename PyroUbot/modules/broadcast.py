@@ -32,8 +32,7 @@ perintah : <code>{0}autobc</code>
     mengirim pesan siaran secara otomatis
 
 query:
-    |on/off |text |delay |list |remove |limit</b></blockquote>
-    
+    |on/off |text |delay |list |remove |limit</b></blockquote> 
 """
 
 
@@ -150,7 +149,6 @@ async def gcast_handler(client, message):
 <blockquote><b>{sks}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ</b>
 <b>{ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</b>
 <b>{ktrng}ᴛʏᴘᴇ :</b> <code>{command}</code></blockquote>
-
 """
     return await message.reply(_gcs)
 
@@ -217,7 +215,6 @@ async def _(client, message):
 <blockquote>{brhsl}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ
 {ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</blockquote></b>
 
-<blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
 """
 
 """
@@ -272,7 +269,6 @@ async def _(client, message):
             txt = f"""
 <blockquote><b>{grp} group: {message.chat.title}  ꜱudah ada dalam blackliꜱt broadcaꜱt</b></blockquote>
 
-<blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
 """
 
 """
@@ -479,7 +475,6 @@ putaran {done}
 {brhsl}ꜱucceꜱ {group} group
 {mng}wait {delay} minuteꜱ</blockquote>
 
-<blockquote><b>USERBOT 15K/BULAN BY @SEWAUSERBOT </blockquote></b>
 """
 
 """,
