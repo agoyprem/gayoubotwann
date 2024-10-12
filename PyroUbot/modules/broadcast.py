@@ -78,11 +78,13 @@ async def limit_cmd(client, message):
                 text = f"""
 <blockquote>{pong} sᴛᴀᴛᴜs ᴀᴋᴜɴ : ʙᴇʟɪ ᴘʀᴇᴍ ᴅᴜʟᴜ ʏᴀ
 {tion} ʟɪᴍɪᴛ ᴄʜᴇᴄᴋ : ᴀᴋᴜɴ ᴀɴᴅᴀ ʙᴇʀᴍᴀsᴀʟᴀʜ{ggl} </blockquote>
+
 """
             else:
                 text = f"""
 <blockquote>sᴛᴀᴛᴜs ᴀᴋᴜɴ : ʙᴇʟɪ ᴘʀᴇᴍ ᴅᴜʟᴜ ʏᴀ
 ʟɪᴍɪᴛ ᴄʜᴇᴄᴋ : ᴀᴋᴜɴ ᴀɴᴅᴀ ʙᴇʀᴍᴀsᴀʟᴀʜ</blockquote>
+
 """
             await client.send_message(message.chat.id, text)
             return await client.invoke(DeleteHistory(peer=bot_info, max_id=0, revoke=True))
@@ -149,6 +151,7 @@ async def gcast_handler(client, message):
 <blockquote><b>{sks}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ</b>
 <b>{ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</b>
 <b>{ktrng}ᴛʏᴘᴇ :</b> <code>{command}</code></blockquote>
+
 """
     return await message.reply(_gcs)
 
