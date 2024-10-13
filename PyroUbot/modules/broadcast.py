@@ -476,9 +476,8 @@ putaran {done}
 {brhsl}ꜱucceꜱ {group} group
 {mng}wait {delay} minuteꜱ</blockquote>
 
-"""
-
 """,
+
                     quote=True,
                 )
                 await asyncio.sleep(int(60 * int(delay)))
