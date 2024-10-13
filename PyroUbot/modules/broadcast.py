@@ -220,7 +220,6 @@ async def _(client, message):
 
 """
 
-"""
     return await message.reply(_gcs)
 
 
