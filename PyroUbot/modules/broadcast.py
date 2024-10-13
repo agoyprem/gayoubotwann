@@ -274,7 +274,6 @@ async def _(client, message):
 
 """
 
-"""
         else:
             await add_to_vars(client.me.id, "BL_ID", chat_id)
             txt = f"""
